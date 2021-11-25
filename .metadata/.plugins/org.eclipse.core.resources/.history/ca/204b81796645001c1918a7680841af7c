@@ -1,0 +1,13 @@
+package entity;
+
+public class Teacher {
+
+	private int id;
+	private String f_name;
+	private String l_name;
+	private String email;
+	
+	public Teacher() {
+		// TODO auto-generated constructor stubs
+	}
+}

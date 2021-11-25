@@ -1,0 +1,4 @@
+#Tomcat publish data
+#Sun Nov 21 21:27:21 IST 2021
+org.eclipse.jst.jee.server\:/binary\:/Users/ramesh.m/eclipse-workspace/LibraryManagement1/src/main/webapp/WEB-INF/lib/spring-web-5.0.2.RELEASE-sources.jar=WEB-INF/lib/spring-web-5.0.2.RELEASE-sources.jar
+org.eclipse.jst.jee.server\:/binary\:/Users/ramesh.m/eclipse-workspace/LibraryManagement1/src/main/webapp/WEB-INF/lib/spring-web-5.0.2.RELEASE.jar=WEB-INF/lib/spring-web-5.0.2.RELEASE.jar

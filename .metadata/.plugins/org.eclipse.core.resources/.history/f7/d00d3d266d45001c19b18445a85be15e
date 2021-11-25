@@ -1,0 +1,53 @@
+package service;
+
+
+
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+import entity.Teacher;
+
+public class Test {
+	
+	
+	public static void main(String[] args) {
+		System.out.println("Connecting to database...");
+		SessionFactory factory = null;
+		Session session = null;
+		
+		factory = new Configuration()
+				.configure("hibernate.cfg.xml")
+				.buildSessionFactory();
+		System.out.println("Database created..");
+		
+		/*
+		Teacher t1 = new Teacher("Ramesh", "Mantripragda", "abc123@abc.com");
+		Teacher t2 = new Teacher("Ramesh", "Mantripragda", "abc123@abc.com");
+		Teacher t3 = new Teacher("Ramesh", "Mantripragda", "abc123@abc.com");
+		Teacher t4 = new Teacher("Ramesh", "Mantripragda", "abc123@abc.com");
+		*/
+		
+		Transaction txn = null;
+		try {
+			session = factory.getCurrentSession();
+			txn = session.beginTransaction();
+			Teacher t = session.get(Teacher.class, 5);
+			System.out.println("Teacher " + t);
+			//session.save(t1);
+			//session.save(t2);
+			//session.save(t3);
+			//session.save(t4);
+			txn.commit();
+		}catch(Exception e) {
+			System.out.println("Errors..");
+			e.printStackTrace();
+			txn.rollback();
+		} finally {
+			session.close();
+		}
+	}
+
+}
